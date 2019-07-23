@@ -21,7 +21,7 @@ function build_java()
 
         (
             cd "java/$x" 
-            mvn clean package 
+            mvn -Dmaven.compiler.source=1.6 -Dmaven.compiler.target=1.6 clean package 
             mv target/$x.war ../../output/
             mvn clean
         )
